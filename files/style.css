@@ -35,7 +35,7 @@ p > b {
     height: 100%;
 }
 
-.gridContainer > .title, .logo, .header, .content {
+.gridContainer > .header, .content {
     padding: 50px;
 }
 
@@ -47,6 +47,7 @@ p > b {
     grid-area: logo;
     user-select: none;
     pointer-events: none;
+    padding: 70px 30px 30px 30px;
 }
 
 .menu {
@@ -127,16 +128,17 @@ p > b {
 
 .infoData {
     margin: 0px;
-    font-size: 1.5em;
-    line-height: 130%;
+    font-size: 2.5em;
+    line-height: 100%;
     font-family: 'Halogen Bold', sans-serif;
 }
 
 .infoText {
     margin: 0px;
-    font-size: 0.2em;
+    font-size: 0.9em;
     text-align: center;
-    font-family: 'Halogen Bold', sans-serif;
+    font-family: 'GreyCliffCF-Bold', sans-serif;
+
 }
 
 .separator {
@@ -148,12 +150,13 @@ p > b {
 .title {
     grid-area: title;
     border: 1px solid #2a5254;
+    padding: 60px 10px 15px 50px;
 }
 
 .title > p {
     margin: auto auto auto 0px;
     line-height: 120%;
-    font-size: 3em;
+    font-size: 3.3em;
     width: fit-content;
 }
 
@@ -161,6 +164,7 @@ p > b {
     display: flex;
     flex-direction: column;
     grid-area: header;
+    font-family: 'Halogen Bold', sans-serif;
     border: 1px solid #2a5254;
     font-size: 1.8em;
 }
@@ -186,7 +190,9 @@ p > b {
 .contentText {
     flex-shrink: 1;
     line-height: 120%;
-    font-size: 0.85em;
+    font-size: 1em;
+    font-family: 'GreyCliffCF', sans-serif;
+
 }
 
 .contentText > p {
@@ -198,17 +204,18 @@ p > b {
     display: flex;
     justify-content: center;
     flex-shrink: 2;
-    font-size: 0.5em;
-    padding-left: 10px;
+    font-size: 0.7em;
+    padding-left: 50px;
+    padding-right: 20px;
 }
 
 .contentButton > button {
-    font-family: 'Halogen';
-    font-size: 0.7em;
+    font-family: 'GreyCliffCF';
+    font-size: 1em;
     padding: 8px 12px 8px 12px;
     color: white;
     background-color: #2a5254;
-    width: 15em;
+    width: 10em;
     cursor: pointer;
 }
 
@@ -241,17 +248,28 @@ p > b {
       "menu info  content";
     }
 
-    .title:hover, .header:hover {
+    .title:hover {
         background: #2a5254;
         color: #fffbf4;
         margin: 15px;
-        padding: 35px;
+        padding: 45px 0px 0px 35px;
+    }
+
+    .header:hover {
+        background: #2a5254;
+        color: #fffbf4;
+        margin: 15px;
+        padding: 35px 35px 35px 35px;
     }
 }
 
 @media (max-width: 1350px) {
-    .gridContainer > .title, .logo, .header, .content {
+    .gridContainer > .logo, .content {
         padding: 20px;
+    }
+
+    .title {
+        padding: 40px 10px 20px 20px;
     }
 
     .menuItem {
@@ -261,22 +279,45 @@ p > b {
     }
 
     .title > p {
-        font-size: 2.2em;
+        font-size: 2.3em;
     }
 
-    .title:hover, .header:hover {
+    .title:hover {
         background: #2a5254;
         color: #fffbf4;
-        margin: 10px;
-        padding: 10px;
+        margin: 10px 10px 10px 10px;
+        padding: 30px 10px 10px 10px;
+    }
+
+    .gridContainer > .header {
+        padding: 20px 10px 20px 20px;
+    }
+
+    .header:hover {
+        background: #2a5254;
+        color: #fffbf4;
+        margin: 10px 10px 10px 10px;
+        padding: 10px 10px 10px 10px;
     }
 
     .header > p {
-        font-size: 0.8em;
+        font-size: 0.7em;
     }
 
     .contentText {
+        font-size: 0.6em;
+    }
+
+    .infoData {
+        font-size: 1.2em;
+    }
+
+    .infoText {
         font-size: 0.5em;
+    }
+
+    .weather {
+        font-size: 0.7em;
     }
 }
 
@@ -319,6 +360,24 @@ p > b {
         margin: auto;
     }
 
+    .title:hover {
+        background: #2a5254;
+        color: #fffbf4;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .gridContainer > .header, .title {
+        padding: 20px;
+    }
+
+    .header:hover {
+        background: #2a5254;
+        color: #fffbf4;
+        margin: 10px;
+        padding: 10px;
+    }
+
     .header > p {
         font-size: 0.8em;
         margin: auto;
@@ -330,8 +389,12 @@ p > b {
     }
 
     .contentText {
-        font-size: 0.8em;
+        font-size: 1em;
         padding-bottom: 20px;
+    }
+
+    .weather {
+        font-size: 0.8em;
     }
 }
 
@@ -378,7 +441,7 @@ p > b {
     }
 
     .contentText {
-        font-size: 0.3em;
+        font-size: 0.6em;
     }
 }
 
@@ -401,5 +464,15 @@ p > b {
 @font-face {
     font-family: 'Halogen';
     src: url('Halogen-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'GreyCliffCF';
+    src: url('greycliffcf.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'GreyCliffCF-Bold';
+    src: url('greycliffcf-bold.otf') format('opentype');
 }
 
