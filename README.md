@@ -7,4 +7,6 @@ Strauss test, create a landing page:
 ## [Live Demo link](https://lidorc145.github.io/Strauss_test/)
 
 ## Preview:
-https://user-images.githubusercontent.com/12116215/216784687-b98225b0-44a8-475c-9ec2-2841b4c0bfcb.mp4
+https://user-images.githubusercontent.com/12116215/216798528-2c614bc1-eba1-410e-b64b-15dc5235c9b5.mp4
+
+
